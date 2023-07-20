@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Human Scene Transformer</title>
+
+    <meta name="description" content="Robots That Can See: Leveraging Human Pose for Trajectory Prediction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Human Scene Transformer" />
+    <meta name="twitter:description" content="Project page for Human Scene Transformer." />
+    <meta name="twitter:image" content="https://human-scene-transformer.github.io/img/hero.jpeg" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-52J0PM8XKV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52J0PM8XKV');
+</script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <strong><font size="+6">Robots That Can See</font></strong> </br> Leveraging Human Pose for Trajectory Prediction </br> 
+                <!--<small>
+                    CoRL 2021
+                </small>-->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <br>
+                <li>Tim Salzmann</li> <li>Lewis Chiang</li> <li>Markus Ryll</li> <li>Dorsa Sadigh</li> <li>Carolina Parada</li> <li>Alex Bewley</li>
+		<br><br>
+                    <a href="https://www.deepmind.com/">   
+                    <image src="img/google_deepmind__lockup.png" height="50px"> </a> 
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="https://www.tum.de/">
+                    <image src="img/tum_logo.png" height="30px"> </a>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="assets/HST_paper.pdf">
+                            <image src="img/hst_paper_mini.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+
+                         <li>
+                            <a href="">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</br>(Coming Soon)</strong></h4>
+                            </a>                   
+                        </li>
+                        
+                        <li>
+                            <a href="">
+                            <image src="img/dataset.png" height="60px">
+                                <h4><strong>Data</br>(Coming Soon)</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+   
+        
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p style="text-align:center;">
+        	   <image src="img/hero.png" height="400px">
+                </p>
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+Anticipating the motion of all humans in dynamic environments such as homes and offices is critical to enable safe and effective robot navigation. Such spaces remain challenging as humans do not follow strict rules of motion and there are often multiple occluded entry points such as corners and doors that create opportunities for sudden encounters. In this work, we present a Transformer based architecture to predict human future trajectories in human-centric environments from input features including human positions, head orientations, and 3D skeletal keypoints from onboard in-the-wild sensory information. The resulting model captures the inherent uncertainty for future human trajectory prediction and achieves state-of-the-art performance on common prediction benchmarks and a human tracking dataset captured from a mobile robot adapted for the prediction task. Furthermore, we identify new agents with limited historical data as a major contributor to error and demonstrate the complimentary nature of 3D skeletal poses in reducing prediction error in such challenging scenarios.
+                </p>
+            </div>
+        </div>
+       
+
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation 
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{hst2023,
+    title={Robots That Can See: Leveraging Human Pose for Trajectory Prediction},
+    author={Salzmann, Tim and Chiang, Lewis and Ryll, Markus and Sadigh, Dorsa and Parada, Carolina and Bewley, Alex}
+    booktitle={},
+    year={2023}
+}</textarea>
+                </div>
+            </div>
+             
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <br><br>
+                The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
